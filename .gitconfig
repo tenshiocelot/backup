@@ -1,0 +1,29 @@
+[user]
+	name = TheOcelot
+	email = tenshiioannis@gmail.com
+
+
+[diff]
+   tool = vimdiff
+
+
+
+
+[alias]
+    lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'                                      %C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold red)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg3 = log --graph --abbrev-commit --decorate --date=relative --format=format:'                      %C(bold red)%d%C(reset)' --all
+    st = status
+    ch = checkout
+    br = branch
+    can = commit --amend --no-edit
+    ca = commit --amend
+    c = commit
+    pf = push -f origin
+    p = push origin
+    todo = !sh -c 'grep --color=always -rn "TODO" `git ls-files`'
+
+    maxtree = !"git lg1"
+    mintree = !"git lg3"
+    unstage = reset HEAD --
+    untag = tag --delete
